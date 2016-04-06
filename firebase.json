@@ -1,0 +1,8 @@
+{
+  "firebase": "fiery-heat-1289",
+  "public": "dist",
+  "rewrites": [{
+     "source": "**",
+     "destination": "/index.html"
+   }]
+}

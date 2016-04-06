@@ -1,0 +1,62 @@
+@import "bootstrap";
+
+body {
+  padding-top: 20px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.library-item {
+  min-height: 150px;
+}
+
+.fa.read {
+  font-size: 22px;
+  color: rgb(122, 123, 130);
+}
+
+.fa.unread {
+  font-size: 22px;
+  color: rgb(86, 168, 238);
+}
+
+a.mark_as_read {
+  text-decoration: none;
+  cursor: pointer;
+
+  .fa-check-circle {
+    display: none;
+  }
+
+  &:hover {
+    .fa-check-circle {
+      display: inline;
+    }
+
+    .fa-circle {
+      display: none;
+    }
+  }
+}
+
+a.mark_as_unread {
+  text-decoration: none;
+  cursor: pointer;
+
+  .fa-circle {
+    display: none;
+  }
+
+  &:hover {
+    .fa-circle {
+      display: inline;
+    }
+
+    .fa-check-circle {
+      display: none;
+    }
+  }
+
+}

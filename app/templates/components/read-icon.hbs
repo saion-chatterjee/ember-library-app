@@ -1,0 +1,11 @@
+<div {{action "toggleReadStatus" item}}>
+{{#if readStatus}}
+<a class="icon mark_as_unread" title= "Mark as unread">
+  <i class='fa fa-check-circle read'></i><i class='fa fa-circle read'></i>
+</a>
+{{else}}
+<a class="icon mark_as_read" title= "Mark as read">
+  <i class='fa fa-circle unread'></i><i class='fa fa-check-circle unread'></i>
+</a>
+{{/if}}
+</div>

@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<h2>List</h2>
+<div class="row">
+  {{#each model as |library|}}
+    <div class="col-md-4">
+      <div class="panel panel-default library-item">
+          <div class="panel-heading">
+              <h3 class="panel-title">{{library.name}}</h3>
+          </div>
+          <div class="panel-body">
+              <p>ADdress: {{library.address}}</p>
+              <p>Phone: {{library.phone}}</p>
+          </div>
+          <div class="panel-footer text-right">
+              {{#read-icon item=library readStatus=library.readStatus}}{{!parameter to take initial value of readStatus on pageload}}
+              {{/read-icon}}
+              {{#link-to 'libraries.edit' library.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+              <button class="btn btn-danger btn-xs" {{action 'deleteLibrary' library}}>Delete</button>
+          </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
